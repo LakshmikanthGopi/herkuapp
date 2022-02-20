@@ -42,9 +42,7 @@ import matplotlib.pyplot as plt
 import scipy.stats as st
 import statistics as s
 
-!pip install dash==2.0.0
 
-!pip install jupyter-dash -q 
 from jupyter_dash import JupyterDash
 import dash_core_components as dcc
 import dash_html_components as html
