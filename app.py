@@ -34,13 +34,14 @@ if __name__ == '__main__':
 
 
 
-
+import os
 import pandas as pd
 import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt 
 import scipy.stats as st
 import statistics as s
+import dash
 
 
 from jupyter_dash import JupyterDash
@@ -55,7 +56,7 @@ df=pd.read_csv('https://raw.githubusercontent.com/srinathkr07/IPL-Data-Analysis/
 import plotly.express as px
 
 
-app = JupyterDash(__name__)
+app = dash.Dash(__name__)
 
 server = app.server
 
