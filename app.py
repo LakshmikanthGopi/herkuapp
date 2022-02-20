@@ -1,4 +1,4 @@
-import dash
+'''import dash
 import dash_auth
 import dash_core_components as dcc
 import dash_html_components as html
@@ -30,4 +30,40 @@ def update_value(value_list):
     return value_list[0]*value_list[1]
  
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run_server(debug=True)'''
+
+
+
+
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt 
+import scipy.stats as st
+import statistics as s
+
+!pip install dash==2.0.0
+
+!pip install jupyter-dash -q 
+from jupyter_dash import JupyterDash
+import dash_core_components as dcc
+import dash_html_components as html
+
+
+
+df=pd.read_csv('https://raw.githubusercontent.com/srinathkr07/IPL-Data-Analysis/master/matches.csv')
+
+
+import plotly.express as px
+
+
+app = JupyterDash(__name__)
+
+server = app.server
+
+fig=px.bar(df,x='winner')
+
+app.layout = html.Div([dcc.Graph(figure=fig)])
+
+if __name__ == '__main__':
+    app.run_server(debug=True, port=8051)
