@@ -66,4 +66,4 @@ fig=px.bar(df,x='winner')
 app.layout = html.Div([dcc.Graph(figure=fig)])
 
 if __name__ == '__main__':
-    app.run_server(debug=True, port=8051)
+    app.run_server(debug=True)
