@@ -36,24 +36,15 @@ if __name__ == '__main__':
 
 import os
 import pandas as pd
-import numpy as np
-import seaborn as sns
-import matplotlib.pyplot as plt 
-import scipy.stats as st
-import statistics as s
 import dash
-
-
-from jupyter_dash import JupyterDash
 import dash_core_components as dcc
 import dash_html_components as html
+import plotly.express as px
 
 
 
 df=pd.read_csv('https://raw.githubusercontent.com/srinathkr07/IPL-Data-Analysis/master/matches.csv')
 
-
-import plotly.express as px
 
 
 app = dash.Dash(__name__)
