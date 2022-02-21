@@ -51,9 +51,14 @@ app = dash.Dash(__name__)
 
 server = app.server
 
-fig=px.bar(df,x='winner')
+fig=px.bar(df,x='winner',title='IPL teams wins')
+fig1=px.bar(df,x='player_of_match',title='Best player')
 
-app.layout = html.Div([dcc.Graph(figure=fig)])
+
+
+app.layout = html.Div(children=[dcc.Graph(figure=fig),
+             html.Div(children=[dcc.Graph(figure=fig1)])   
+])    
 
 if __name__ == '__main__':
     app.run_server(debug=True)
